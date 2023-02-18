@@ -1,67 +1,10 @@
--- phpMyAdmin SQL Dump
--- version 4.9.5deb2
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Generation Time: Feb 18, 2023 at 01:28 PM
--- Server version: 8.0.32-0ubuntu0.20.04.2
--- PHP Version: 7.4.3-4ubuntu2.17
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `Events_db`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `events`
---
-
-CREATE TABLE `events` (
-  `venue_id` int NOT NULL,
-  `event_name` varchar(50) NOT NULL,
-  `event_date` date NOT NULL,
-  `organizer_email` varchar(100) NOT NULL,
-  `organizer_phone` decimal(10,0) NOT NULL,
-  `event_description` text NOT NULL,
-  `event_type` varchar(50) NOT NULL,
-  `event_location` varchar(50) NOT NULL,
-  `event_status` varchar(50) NOT NULL,
-  `max_seats` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`venue_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `venue_id` int NOT NULL AUTO_INCREMENT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO events (venue_id, event_name, event_date, organizer_email, organizer_phone, event_description, event_type, event_location, event_status, max_seats)
+VALUES
+(1, 'Music Festival', '2023-03-12', 'musicfest@gmail.com', '022-251678', 'A weekend to indulge in warm music with amazing artists and lip-smacking food', 'On-Premise', 'Mumbai', 'Live', 250),
+(2, 'Business Conference', '2023-04-17', 'nyc.co@gmail.com', '044-781209', 'This conference is held to discuss new trends and opportunities pertaining to the business', 'Virtual', 'Zoom', 'Scheduled', 80),
+(3, 'Hip Hop Beginners Class', '2023-02-02', 'danceguru@gmail.com', '011-457631', 'What you''ll learn - Confidently step into a beginners Hip Hop class and understand the movements', 'On-Premise', 'Delhi', 'Completed', 100),
+(4, 'Art & Craft Workshop', '2023-03-20', 'craftsshop@gmail.com', '033-892561', 'Learn the layering technique in poster colours. It is a 3-layer painting which has a combination of brush painting and blending method', 'Virtual', 'Zoom', 'Scheduled', 50),
+(5, 'Book Reading Festival', '2023-05-19', 'readingfest@gmail.com', '141-378954', 'A reading festival is a gathering that focuses on celebrating all aspects of books and reading', 'On-Premise', 'Jaipur', 'Live', 500),
+(6, 'State Chess Championship', '2023-04-15', 'chesschamp@gmail.com', '011-190258', 'We have designed State Chess Championship to celebrate and cherish Indian love and passion for the game', 'On-Premise', 'Delhi', 'Scheduled', 40),
+(7, 'Open Mic', '2023-03-25', 'laughstore@gmail.com', '022-674381', 'The Laugh Store is giving an opportunity to newe and emerging comedians to try out new material at our open mic', 'On-Premise', 'Mumbai', 'Live', 50),
+(8, 'Sudoku Championship', '2023-02-17', 'sudoku_2023@gmail.com', '020-892347', 'The championship follows the same rule as Sudoku, and will have 2 rounds Round 1 "Qualifier" and Round 2 "Finals".', 'Virtual', 'Watsapp', 'Cancelled', 50);
